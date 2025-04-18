@@ -1,0 +1,135 @@
+/* styles.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar {
+  background-color: #111;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  border-right: 1px solid #333;
+}
+
+.sidebar button {
+  padding: 12px;
+  margin: 5px 10px;
+  border: none;
+  background-color: #1c1c1c;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 6px;
+  text-align: left;
+  transition: background 0.3s;
+}
+
+.sidebar button:hover {
+  background-color: #333;
+}
+
+.sidebar button.active {
+  background-color: #ff6600;
+  color: #000;
+}
+
+.form-container {
+  flex: 1;
+  padding: 20px;
+  background-color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.form-container h2 {
+  margin-bottom: 10px;
+}
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: #222;
+  border: 1px solid #444;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.form-container button {
+  margin-top: 10px;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+  background-color: #e65c00;
+}
+
+.result-container {
+  width: 300px;
+  background-color: #0f0f0f;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid #333;
+  text-align: center;
+}
+
+.result-container video {
+  max-width: 100%;
+  height: auto;
+  border: 2px dashed #444;
+  background-color: #1a1a1a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    border-right: none;
+    border-bottom: 1px solid #333;
+  }
+
+  .sidebar button {
+    flex: 1;
+    text-align: center;
+  }
+
+  .form-container,
+  .result-container {
+    width: 100%;
+  }
+
+  .result-container {
+    margin-top: 10px;
+  }
+}
