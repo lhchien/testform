@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Creator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <button class="form-tab active" data-form="tiny">Tiny Channel</button>
+      <button class="form-tab" data-form="adam">Adam Channel</button>
+    </aside>
+
+    <main class="main-content">
+      <form id="tiny-form" class="form active">
+        <h2>What story you want to design?</h2>
+        <label>Nội dung câu chuyện:</label>
+        <textarea name="content" required></textarea>
+
+        <label>Nhân vật chính:</label>
+        <input type="text" name="character" required />
+
+        <label>Phong cảnh ảnh:</label>
+        <input type="text" name="style" required />
+
+        <label>Độ dài nội dung (từ):</label>
+        <input type="number" name="length" required />
+
+        <button type="submit">Tạo Video</button>
+      </form>
+
+      <form id="adam-form" class="form hidden">
+        <h2>What story you want to design?</h2>
+        <label>Nội dung câu chuyện:</label>
+        <textarea name="content" required></textarea>
+
+        <label>Nhân vật chính:</label>
+        <input type="text" name="character" required />
+
+        <label>Phong cảnh ảnh:</label>
+        <input type="text" name="style" required />
+
+        <label>Độ dài nội dung (từ):</label>
+        <input type="number" name="length" required />
+
+        <button type="submit">Tạo Video</button>
+      </form>
+    </main>
+
+    <section class="video-preview">
+      <h2>Your video here</h2>
+      <div class="preview-box" id="video-result">
+        <div class="loading">Đợi kết quả trả về ...</div>
+      </div>
+    </section>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
