@@ -3,60 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Video Creator</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Video Form</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
     <aside class="sidebar">
-      <button class="form-tab active" data-form="tiny">Tiny Channel</button>
-      <button class="form-tab" data-form="adam">Adam Channel</button>
+      <button class="menu-btn active" onclick="switchForm('tiny')">Tiny Channel</button>
+      <button class="menu-btn" onclick="switchForm('adam')">Adam Channel</button>
     </aside>
 
-    <main class="main-content">
-      <form id="tiny-form" class="form active">
+    <main class="content">
+      <section id="tiny-form" class="form-section">
         <h2>What story you want to design?</h2>
-        <label>Nội dung câu chuyện:</label>
-        <textarea name="content" required></textarea>
+        <form id="form-tiny">
+          <label>Nội dung câu chuyện:</label>
+          <textarea name="story"></textarea>
+          <label>Nhân vật chính:</label>
+          <input type="text" name="character" />
+          <label>Phong cảnh ảnh:</label>
+          <input type="text" name="style" />
+          <label>Độ dài nội dung (từ):</label>
+          <input type="number" name="length" />
+          <button type="submit">Tạo Video</button>
+        </form>
+      </section>
 
-        <label>Nhân vật chính:</label>
-        <input type="text" name="character" required />
-
-        <label>Phong cảnh ảnh:</label>
-        <input type="text" name="style" required />
-
-        <label>Độ dài nội dung (từ):</label>
-        <input type="number" name="length" required />
-
-        <button type="submit">Tạo Video</button>
-      </form>
-
-      <form id="adam-form" class="form hidden">
+      <section id="adam-form" class="form-section hidden">
         <h2>What story you want to design?</h2>
-        <label>Nội dung câu chuyện:</label>
-        <textarea name="content" required></textarea>
+        <form id="form-adam">
+          <label>Nội dung câu chuyện:</label>
+          <textarea name="story"></textarea>
+          <label>Nhân vật chính:</label>
+          <input type="text" name="character" />
+          <label>Phong cảnh ảnh:</label>
+          <input type="text" name="style" />
+          <label>Độ dài nội dung (từ):</label>
+          <input type="number" name="length" />
+          <button type="submit">Tạo Video</button>
+        </form>
+      </section>
 
-        <label>Nhân vật chính:</label>
-        <input type="text" name="character" required />
-
-        <label>Phong cảnh ảnh:</label>
-        <input type="text" name="style" required />
-
-        <label>Độ dài nội dung (từ):</label>
-        <input type="number" name="length" required />
-
-        <button type="submit">Tạo Video</button>
-      </form>
+      <section class="result">
+        <h2>Your video here</h2>
+        <div id="video-display">
+          <p class="loading">Đợi kết quả trả về...</p>
+        </div>
+      </section>
     </main>
-
-    <section class="video-preview">
-      <h2>Your video here</h2>
-      <div class="preview-box" id="video-result">
-        <div class="loading">Đợi kết quả trả về ...</div>
-      </div>
-    </section>
   </div>
 
-  <script src="scripts.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
